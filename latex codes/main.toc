@@ -1,0 +1,31 @@
+\babel@toc {UKenglish}{}
+\contentsline {section}{\numberline {1}实验任务}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}任务一}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}任务二}{3}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}任务三}{3}{subsection.1.3}% 
+\contentsline {section}{\numberline {2}实验原理}{4}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}图像缩放}{4}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}双线形插值}{4}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}RGB颜色空间}{5}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}HSI颜色空间}{5}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.1}HSI空间简介}{5}{subsubsection.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.4.2}RGB转换为HSI}{6}{subsubsection.2.4.2}% 
+\contentsline {subsubsection}{\numberline {2.4.3}HSI转换为RGB}{7}{subsubsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.5}YUV颜色空间}{7}{subsection.2.5}% 
+\contentsline {subsubsection}{\numberline {2.5.1}YUV空间简介}{7}{subsubsection.2.5.1}% 
+\contentsline {subsubsection}{\numberline {2.5.2}YUV空间与RGB空间的互相转换}{8}{subsubsection.2.5.2}% 
+\contentsline {subsubsection}{\numberline {2.5.3}YUV采样格式}{9}{subsubsection.2.5.3}% 
+\contentsline {subsection}{\numberline {2.6}峰值信噪比$PSNR$}{9}{subsection.2.6}% 
+\contentsline {subsubsection}{\numberline {2.6.1}$PSNR$计算}{10}{subsubsection.2.6.1}% 
+\contentsline {subsubsection}{\numberline {2.6.2}$PSNR$特点}{10}{subsubsection.2.6.2}% 
+\contentsline {subsection}{\numberline {2.7}结构相似性$SSIM$}{10}{subsection.2.7}% 
+\contentsline {subsubsection}{\numberline {2.7.1}$SSIM$的计算}{10}{subsubsection.2.7.1}% 
+\contentsline {subsubsection}{\numberline {2.7.2}$SSIM$应用于图像质量评估}{11}{subsubsection.2.7.2}% 
+\contentsline {section}{\numberline {3}实验结果与分析}{12}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}任务一 \ 图片的采样与插值}{12}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}任务二 \ 颜色空间的转换}{13}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}H、S、I对图片质量的影响}{13}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Y、U、V对图片质量的影响}{14}{subsubsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.3}YUV采样格式对图片质量的影响}{15}{subsubsection.3.2.3}% 
+\contentsline {subsection}{\numberline {3.3}图片质量评价指标}{15}{subsection.3.3}% 
+\contentsline {section}{\numberline {4}致谢与说明}{17}{section.4}% 

@@ -1,0 +1,33 @@
+function out = yuvupsample(yuv,type)
+%yuv sample , type={'444','422','420'}
+out=yuv;
+if(type=='444')
+    out=yuv;
+    flag=1;
+end
+if(type=='422')
+    idx=2:2:size(yuv,2);
+    out(:,idx,2)=(out(:,idx,2)+out(:,min(idx+1,size(yuv,2)),2))/2;
+    out(:,idx-1,3)=(out(:,max(idx-2,1),3)+out(:,idx-1,3))/2;
+    flag=2;
+end
+if(type=='420')
+    i=2:2:size(yuv,1);
+    j=2:2:size(yuv,2);
+    u11=out(i-1,j-1,2);
+    u12=out(i-1,min(j+1,size(yuv,2)),2);
+    u21=out(min(i+1,size(yuv,1)),j-1,2);
+    u22=out(min(i+1,size(yuv,1)),min(j+1,size(yuv,2)),2);
+    out(i,j,2)=(u11+u12+u21+u22)/4;
+    out(i-1,j,2)=(u11+u12)/2;
+    out(i,j-1,2)=(u11+u21)/2;
+    v11=out(max(i-2,1),j-1,3);
+    v12=out(max(1,i-2),min(j+1,size(yuv,2)),3);
+    v21=out(i,j-1,3);
+    v22=out(i,min(j+1,size(yuv,2)),3);
+    out(i,j,3)=(v21+v22)/2;
+    out(i-1,j-1,3)=(v11+v21)/2;
+    out(i-1,j,3)=(v11+v21+v12+v22)/4;
+    flag=3;
+end
+end

@@ -1,0 +1,24 @@
+function rgb=hsi2rgb(hsi)
+%hsi2rgb
+rgb=zeros(size(hsi));
+h=hsi(:,:,1)*2*pi;
+s=hsi(:,:,2);
+i=hsi(:,:,3);
+r=zeros(size(hsi,1),size(hsi,2));
+g=r;
+b=r;
+idx1=find((h>=0)&(h<2*pi/3));
+b(idx1)=i(idx1).*(1-s(idx1));
+r(idx1)=i(idx1).*(1+s(idx1).*cos(h(idx1))./cos(pi/3-h(idx1)));
+g(idx1)=3*i(idx1)-(r(idx1)+b(idx1));
+idx2=find((h>=2*pi/3)&(h<4*pi/3));
+r(idx2)=i(idx2).*(1-s(idx2));
+g(idx2)=i(idx2).*(1+s(idx2).*cos(h(idx2)-2*pi/3)./cos(pi-h(idx2)));
+b(idx2)=3*i(idx2)-(r(idx2)+g(idx2));
+idx3=find((h>=4*pi/3)&(h<=2*pi));
+g(idx3)=i(idx3).*(1-s(idx3));
+b(idx3)=i(idx3).*(1+s(idx3).*cos(h(idx3)-4*pi/3)./cos(5*pi/3-h(idx3)));
+r(idx3)=3*i(idx3)-(g(idx3)+b(idx3));
+rgb(:,:,1)=r;
+rgb(:,:,2)=g;
+rgb(:,:,3)=b;
